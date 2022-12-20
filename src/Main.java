@@ -3,8 +3,8 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         // task1();
-        // task2();
-        task3();
+        //task2();
+        //task3();
         task4();
 
     }
@@ -43,13 +43,26 @@ public class Main {
     public static void task2() {
         System.out.println("задача 2");
         int[] weigth = new int[3];
-        {
-            //System.out.println(Arrays.toString(weigth));
-        }
+        weigth[0] = 1;
+        weigth[1] = 2;
+        weigth[2] = 3;
         double[] x = {1.57, 7.654, 9.986};
-        {
-            System.out.println(Arrays.toString(x));
+        for (int i = 0; i < weigth.length; i++) {
+            System.out.print(weigth[i]);
+            if (i != weigth.length - 1) ;
+            {
+                System.out.print(", ");
+            }
         }
+        System.out.println();
+        for (int i = 0; i < x.length; i++) {
+            System.out.print(x[i]);
+            if (i != x.length - 1) ;
+            {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
     }
 
     //Распечатайте на отдельной строчке элементы каждого массива в обратном порядке через запятую.
@@ -57,23 +70,37 @@ public class Main {
     public static void task3() {
         System.out.println("задача 3");
         int[] weigth = {3, 2, 1};
-        System.out.println(Arrays.toString(weigth));
         double[] weigthX = {9.986, 7.654, 1.57};
-        System.out.println(Arrays.toString(weigthX));
+        for (int i = weigthX.length - 1; i >= 0; i--) {
+            System.out.print(weigthX[i]);
+            if (i != 0) {
+                System.out.print(",");
+            }
+        }
+        System.out.println();
 
+        for (int i = weigth.length - 1; i >= 0; i--) {
+            System.out.print(weigth[i]);
+            if (i != 0) {
+                System.out.print(",");
+            }
+        }
+        System.out.println();
     }
 
-    //Пройдитесь по первому целочисленному массиву и все нечетные числа в нем сделайте четными
-    // (нужно прибавить 1).
-    public static void task4() {
-        System.out.println("задача 4");
-        int[] weigth = {1, 2, 3};
-        for (int i = 0; i < weigth.length; i++) {
-            if (weigth[i]%2!=0)
-            System.out.println((weigth[i]) + 1);
+        //Пройдитесь по первому целочисленному массиву и все нечетные числа в нем сделайте четными
+        // (нужно прибавить 1).
+        public static void task4 () {
+            System.out.println("задача 4");
+            int[] weigth = {1, 2, 3};
+            for (int i = 0; i < weigth.length; i++) {
+                if (weigth[i] % 2!= 0)
+                    weigth[i]+=1;
+                    System.out.println(Arrays.toString(weigth));
+            }
         }
     }
-}
+
 
 
 
